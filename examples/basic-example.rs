@@ -6,10 +6,9 @@ use embedded_graphics_simulator::sdl2::MouseButton;
 use embedded_graphics_simulator::{
     OutputSettingsBuilder, SimulatorDisplay, SimulatorEvent, Window,
 };
-use kolibri_embedded_gui::button::Button;
-use kolibri_embedded_gui::label::Label;
 use kolibri_embedded_gui::style::medsize_rgb565_style;
 use kolibri_embedded_gui::ui::{Interaction, Ui};
+use kolibri_embedded_gui::widgets::{Button, Label};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // Simulator Setup (ILI9341-like Display)

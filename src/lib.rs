@@ -3,23 +3,16 @@
 #![allow(clippy::doc_nested_refdefs)]
 #![cfg_attr(not(doctest), doc = include_str!("../README.md"))]
 
-pub mod button;
-pub mod checkbox;
 // mod icon;
 // pub mod icon;
-pub mod icon;
-pub mod label;
+
 pub mod smartstate;
-pub mod spacer;
 pub mod style;
 // mod temp;
 pub mod framebuf;
 pub mod helpers;
-pub mod iconbutton;
-pub mod slider;
-pub mod toggle_button;
-pub mod toggle_switch;
 pub mod ui;
+pub mod widgets;
 
 pub mod prelude {
     pub use embedded_iconoir::prelude::*;

@@ -6,15 +6,14 @@ use embedded_graphics_simulator::sdl2::MouseButton;
 use embedded_graphics_simulator::{
     OutputSettingsBuilder, SimulatorDisplay, SimulatorEvent, Window,
 };
-use kolibri_embedded_gui::button::Button;
-use kolibri_embedded_gui::helpers::keyboard;
-use kolibri_embedded_gui::helpers::keyboard::{draw_keyboard, Layout};
-use kolibri_embedded_gui::icon::IconWidget;
-use kolibri_embedded_gui::icons::size24px;
-use kolibri_embedded_gui::label::Label;
-use kolibri_embedded_gui::smartstate::SmartstateProvider;
-use kolibri_embedded_gui::style::medsize_rgb565_style;
-use kolibri_embedded_gui::ui::{Interaction, Ui};
+use kolibri_embedded_gui::{
+    helpers::keyboard::{self, draw_keyboard, Layout},
+    icons::size24px,
+    smartstate::SmartstateProvider,
+    style::medsize_rgb565_style,
+    ui::{Interaction, Ui},
+    widgets::{Button, IconWidget, Label},
+};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // ILI9341-clone like display

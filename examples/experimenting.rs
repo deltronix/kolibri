@@ -5,17 +5,13 @@ use embedded_graphics_simulator::sdl2::MouseButton;
 use embedded_graphics_simulator::{
     OutputSettingsBuilder, SimulatorDisplay, SimulatorEvent, Window,
 };
-use kolibri_embedded_gui::button::Button;
-use kolibri_embedded_gui::icon::IconWidget;
-use kolibri_embedded_gui::iconbutton::IconButton;
 use kolibri_embedded_gui::icons::size24px;
-use kolibri_embedded_gui::label::{HashLabel, Hasher};
-use kolibri_embedded_gui::slider::Slider;
 use kolibri_embedded_gui::smartstate::SmartstateProvider;
 use kolibri_embedded_gui::style::*;
-use kolibri_embedded_gui::toggle_button::ToggleButton;
-use kolibri_embedded_gui::toggle_switch::ToggleSwitch;
 use kolibri_embedded_gui::ui::{Interaction, Ui};
+use kolibri_embedded_gui::widgets::{
+    Button, HashLabel, Hasher, IconButton, IconWidget, Slider, ToggleButton, ToggleSwitch,
+};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // ILI9341-clone like display
