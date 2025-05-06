@@ -10,7 +10,7 @@
 //! with the framework's [Smartstate] system for efficient rendering.
 //!
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use core::ops::{Add, Sub};
 use embedded_graphics::draw_target::DrawTarget;
@@ -39,12 +39,12 @@ use embedded_iconoir::{size12px, size18px, size24px, size32px};
 /// # use embedded_iconoir::prelude::*;
 /// # use embedded_iconoir::size12px;
 /// # use kolibri_embedded_gui::ui::*;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::Label;
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
-/// # use kolibri_embedded_gui::checkbox::Checkbox;
+/// # use kolibri_embedded_gui::widgets::Checkbox;
 ///
 /// let mut checked = false;
 /// let mut smartstates = SmartstateProvider::<10>::new();

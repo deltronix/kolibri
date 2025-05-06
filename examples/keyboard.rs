@@ -11,8 +11,8 @@ use kolibri_embedded_gui::{
     icons::size24px,
     smartstate::SmartstateProvider,
     style::medsize_rgb565_style,
-    ui::{Interaction, Ui},
     widgets::{Button, IconWidget, Label},
+    {Interaction, Ui},
 };
 
 fn main() -> Result<(), core::convert::Infallible> {

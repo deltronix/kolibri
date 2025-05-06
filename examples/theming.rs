@@ -11,8 +11,8 @@ use kolibri_embedded_gui::style::{
     medsize_blue_rgb565_style, medsize_crt_rgb565_style, medsize_light_rgb565_style,
     medsize_retro_rgb565_style, medsize_rgb565_style, medsize_sakura_rgb565_style,
 };
-use kolibri_embedded_gui::ui::{Interaction, Ui};
 use kolibri_embedded_gui::widgets::{Button, Checkbox, IconButton, IconWidget, Label};
+use kolibri_embedded_gui::{Interaction, Ui};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // Simulator Setup (ILI9341-like Display)

@@ -8,10 +8,10 @@ use embedded_graphics_simulator::{
 use kolibri_embedded_gui::icons::size24px;
 use kolibri_embedded_gui::smartstate::SmartstateProvider;
 use kolibri_embedded_gui::style::*;
-use kolibri_embedded_gui::ui::{Interaction, Ui};
 use kolibri_embedded_gui::widgets::{
     Button, HashLabel, Hasher, IconButton, IconWidget, Slider, ToggleButton, ToggleSwitch,
 };
+use kolibri_embedded_gui::{Interaction, Ui};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // ILI9341-clone like display

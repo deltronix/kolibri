@@ -10,7 +10,7 @@
 //! with the framework's [Smartstate] system for efficient rendering.
 
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use embedded_graphics::draw_target::DrawTarget;
 use embedded_graphics::geometry::{Point, Size};
@@ -42,13 +42,13 @@ use embedded_graphics::primitives::{
 /// # use embedded_graphics::primitives::Rectangle;
 /// # use embedded_iconoir::prelude::*;
 /// # use kolibri_embedded_gui::ui::*;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::Label;
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
 /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-/// # use kolibri_embedded_gui::toggle_switch::ToggleSwitch;
+/// # use kolibri_embedded_gui::widgets::ToggleSwitch;
 /// let mut state = false;
 ///
 /// // Create a basic toggle switch
@@ -105,13 +105,13 @@ impl<'a> ToggleSwitch<'a> {
     /// # use embedded_graphics::primitives::Rectangle;
     /// # use embedded_iconoir::prelude::*;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::toggle_switch::ToggleSwitch;
+    /// # use kolibri_embedded_gui::widgets::ToggleSwitch;
     /// let mut state = false;
     /// ui.add(ToggleSwitch::new(&mut state).width(60));
     /// ```
@@ -135,13 +135,13 @@ impl<'a> ToggleSwitch<'a> {
     /// # use embedded_graphics::primitives::Rectangle;
     /// # use embedded_iconoir::prelude::*;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::toggle_switch::ToggleSwitch;
+    /// # use kolibri_embedded_gui::widgets::ToggleSwitch;
     /// let mut state = false;
     ///
     /// loop {

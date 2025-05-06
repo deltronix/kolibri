@@ -3,9 +3,9 @@
 //! This module contains keyboard layouts for different languages and regions (QWERTY, QWERTZ, AZERTY),
 //! along with functionality to draw an interactive on-screen keyboard.
 use crate::smartstate::SmartstateProvider;
-use crate::ui::{InternalResponse, Response, Ui};
 use crate::widgets::Button;
 use crate::widgets::IconButton;
+use crate::{InternalResponse, Response, Ui};
 use embedded_graphics::prelude::*;
 use embedded_iconoir::size16px;
 

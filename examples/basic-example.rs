@@ -7,8 +7,8 @@ use embedded_graphics_simulator::{
     OutputSettingsBuilder, SimulatorDisplay, SimulatorEvent, Window,
 };
 use kolibri_embedded_gui::style::medsize_rgb565_style;
-use kolibri_embedded_gui::ui::{Interaction, Ui};
 use kolibri_embedded_gui::widgets::{Button, Label};
+use kolibri_embedded_gui::{Interaction, Ui};
 
 fn main() -> Result<(), core::convert::Infallible> {
     // Simulator Setup (ILI9341-like Display)

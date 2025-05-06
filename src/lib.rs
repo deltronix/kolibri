@@ -11,12 +11,19 @@ pub mod style;
 // mod temp;
 pub mod framebuf;
 pub mod helpers;
+pub mod interaction;
+pub mod response;
 pub mod ui;
 pub mod widgets;
 
 pub mod prelude {
     pub use embedded_iconoir::prelude::*;
 }
+
+pub use interaction::Interaction;
+pub use response::{GuiError, GuiResult, InternalResponse, Response};
+pub use ui::Ui;
+pub use ui::Widget;
 
 pub use embedded_iconoir::icons;
 

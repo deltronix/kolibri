@@ -15,7 +15,7 @@ use kolibri_embedded_gui::icons::size18px;
 use kolibri_embedded_gui::prelude::*;
 use kolibri_embedded_gui::smartstate::{Container, Smartstate, SmartstateProvider};
 use kolibri_embedded_gui::style::medsize_rgb565_style;
-use kolibri_embedded_gui::ui::{GuiResult, Interaction, Response, Ui, Widget};
+use kolibri_embedded_gui::{GuiResult, Interaction, Response, Ui, Widget};
 use std::cmp::max;
 use std::ops::{Add, Sub};
 use std::time::Duration;

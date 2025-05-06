@@ -3,7 +3,7 @@
 //! See [Button] for more info.
 
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use core::ops::Add;
 use embedded_graphics::draw_target::DrawTarget;
@@ -33,19 +33,18 @@ use embedded_graphics::text::{Baseline, Text};
 /// # use embedded_graphics::pixelcolor::Rgb565;
 /// # use embedded_graphics_simulator::{SimulatorDisplay, OutputSettingsBuilder, Window};
 /// # use kolibri_embedded_gui::style::medsize_rgb565_style;
-/// # use kolibri_embedded_gui::ui::Ui;
+/// # use kolibri_embedded_gui::Ui;
 /// # use embedded_graphics::prelude::*;
 /// # use embedded_graphics::primitives::Rectangle;
 /// # use embedded_iconoir::prelude::*;
 /// # use embedded_iconoir::size12px;
 /// # use kolibri_embedded_gui::ui::*;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::{Label, Button};
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
 /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-/// # use kolibri_embedded_gui::button::Button;
 ///
 /// // Create a basic button
 /// if ui.add(Button::new("Click me!")).clicked() {

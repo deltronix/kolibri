@@ -10,7 +10,7 @@
 //! with the framework's [Smartstate] system for efficient rendering.
 //!
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiError, GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use embedded_graphics::draw_target::DrawTarget;
 use embedded_graphics::geometry::{Point, Size};
@@ -37,13 +37,13 @@ use embedded_graphics::text::{Baseline, Text};
 /// # use embedded_graphics::primitives::Rectangle;
 /// # use embedded_iconoir::prelude::*;
 /// # use kolibri_embedded_gui::ui::*;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::Label;
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
 /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-/// # use kolibri_embedded_gui::toggle_button::ToggleButton;
+/// # use kolibri_embedded_gui::widgets::ToggleButton;
 /// let mut state = false;
 ///
 /// loop {
@@ -75,13 +75,13 @@ impl<'a> ToggleButton<'a> {
     /// # use embedded_graphics::primitives::Rectangle;
     /// # use embedded_iconoir::prelude::*;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::toggle_button::ToggleButton;
+    /// # use kolibri_embedded_gui::widgets::ToggleButton;
     /// let mut state = false;
     /// let mut smartstateProvider = SmartstateProvider::<20>::new();
     ///

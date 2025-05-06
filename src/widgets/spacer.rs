@@ -18,8 +18,8 @@
 //! # use kolibri_embedded_gui::style::medsize_rgb565_style;
 //! # use kolibri_embedded_gui::ui::Ui;
 //! # use embedded_graphics::prelude::*;
-//! # use kolibri_embedded_gui::spacer::Spacer;
-//! # use kolibri_embedded_gui::label::Label;
+//! # use kolibri_embedded_gui::widgets::Spacer;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
 //! # let mut window = Window::new("Kolibri Example", &output_settings);
@@ -49,7 +49,7 @@
 //! with the layout system to reserve space where nothing will be drawn.
 //!
 
-use crate::ui::{GuiResult, Response, Ui, Widget};
+use crate::{GuiResult, Response, Ui, Widget};
 use embedded_graphics::draw_target::DrawTarget;
 use embedded_graphics::geometry::Size;
 use embedded_graphics::pixelcolor::PixelColor;

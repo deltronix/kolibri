@@ -24,13 +24,13 @@
 //! # use embedded_iconoir::prelude::*;
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
 //! # let mut window = Window::new("Kolibri Example", &output_settings);
 //! # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-//! # use kolibri_embedded_gui::iconbutton::IconButton;
+//! # use kolibri_embedded_gui::widgets::IconButton;
 //! # use embedded_iconoir::size12px::actions::AddCircle;
 //! // Basic icon button
 //! ui.add(IconButton::new(size12px::actions::AddCircle));
@@ -59,7 +59,7 @@
 //! - Pressed/Active: Primary color background with highlighted border
 //!
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use core::marker::PhantomData;
 use embedded_graphics::draw_target::DrawTarget;
@@ -104,13 +104,13 @@ impl<'a, ICON: IconoirIcon> IconButton<'a, ICON> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::iconbutton::IconButton;
+    /// # use kolibri_embedded_gui::widgets::IconButton;
     /// use embedded_iconoir::size24px;
     /// ui.add(IconButton::new(size24px::actions::AddCircle));
     /// ```
@@ -139,13 +139,13 @@ impl<'a, ICON: IconoirIcon> IconButton<'a, ICON> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::iconbutton::IconButton;
+    /// # use kolibri_embedded_gui::widgets::IconButton;
     /// use embedded_iconoir::size24px;
     /// ui.add(IconButton::new(size24px::actions::AddCircle).label("Add"));
     /// ```
@@ -170,13 +170,13 @@ impl<'a, ICON: IconoirIcon> IconButton<'a, ICON> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::iconbutton::IconButton;
+    /// # use kolibri_embedded_gui::widgets::IconButton;
     /// use embedded_iconoir::size24px;
     /// ui.add(IconButton::<size24px::actions::AddCircle>::new_from_type());
     /// ```
@@ -205,13 +205,13 @@ impl<'a, ICON: IconoirIcon> IconButton<'a, ICON> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-    /// # use kolibri_embedded_gui::iconbutton::IconButton;
+    /// # use kolibri_embedded_gui::widgets::IconButton;
     /// let mut my_smartstate = Smartstate::empty();
     /// ui.add(IconButton::new(size12px::actions::AddCircle).smartstate(&mut my_smartstate));
     /// ```

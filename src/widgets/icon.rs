@@ -24,14 +24,14 @@
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
 //! # use embedded_graphics::mono_font::ascii;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
 //! # let mut window = Window::new("Kolibri Example", &output_settings);
 //! # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
 //! # let mut smartstateProvider = SmartstateProvider::<20>::new();
-//! # use kolibri_embedded_gui::icon::*;
+//! # use kolibri_embedded_gui::widgets::IconWidget;
 //! // Basic icon usage
 //! ui.add(IconWidget::new(size12px::actions::AddCircle));
 //!
@@ -51,7 +51,7 @@
 //!
 
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiError, GuiResult, Response, Ui, Widget};
+use crate::{GuiError, GuiResult, Response, Ui, Widget};
 use core::marker::PhantomData;
 use core::ops::Add;
 use embedded_graphics::draw_target::DrawTarget;

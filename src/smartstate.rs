@@ -122,7 +122,7 @@ impl<T: PartialEq> Container<'_, T> {
 ///
 /// ```rust
 /// use kolibri_embedded_gui::smartstate::{Container, Smartstate};
-/// # use kolibri_embedded_gui::ui::{GuiResult, InternalResponse, Response, Ui, Widget};
+/// # use kolibri_embedded_gui::{GuiResult, InternalResponse, Response, Ui, Widget};
 /// # use embedded_graphics::draw_target::DrawTarget;
 /// # use embedded_graphics::pixelcolor::PixelColor;
 /// # use embedded_graphics::primitives::PrimitiveStyleBuilder;

@@ -21,13 +21,12 @@
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
 //! # use embedded_graphics::mono_font::ascii;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::{Label, Hasher, HashLabel};
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
 //! # let mut window = Window::new("Kolibri Example", &output_settings);
 //! # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
-//! # use kolibri_embedded_gui::label::*;
 //!
 //! // Create a basic label
 //! ui.add(Label::new("Hello World"));
@@ -40,7 +39,7 @@
 //! ```
 
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiError, GuiResult, Response, Ui, Widget};
+use crate::{GuiError, GuiResult, Response, Ui, Widget};
 use core::hash::BuildHasher;
 use core::hash::Hash;
 use core::ops::Add;
@@ -77,14 +76,13 @@ use foldhash::fast::RandomState;
 /// # use embedded_iconoir::size12px;
 /// # use kolibri_embedded_gui::ui::*;
 /// # use embedded_graphics::mono_font::ascii;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::Label;
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
 /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
 /// # let mut smartstateProvider = SmartstateProvider::<20>::new();
-/// # use kolibri_embedded_gui::label::*;
 ///
 /// // Basic label
 /// ui.add(Label::new("Basic text"));
@@ -114,12 +112,11 @@ impl<'a> Label<'a> {
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
     /// # use embedded_graphics::mono_font::ascii;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::Label;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
-    /// # use kolibri_embedded_gui::label::*;
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
     /// ui.add(Label::new("Hello World"));
     /// ```
@@ -146,12 +143,11 @@ impl<'a> Label<'a> {
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
     /// # use embedded_graphics::mono_font::ascii;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::{Label, Hasher};
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
-    /// # use kolibri_embedded_gui::label::*;
     /// # let hasher = Hasher::new();
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
     /// ui.add(Label::new("Custom Font").with_font(ascii::FONT_10X20));
@@ -179,12 +175,11 @@ impl<'a> Label<'a> {
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
     /// # use embedded_graphics::mono_font::ascii;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::{Label, Hasher, HashLabel};
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
-    /// # use kolibri_embedded_gui::label::*;
     /// # let hasher = Hasher::new();
     /// # let mut smartstateProvider = SmartstateProvider::<20>::new();
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
@@ -302,12 +297,11 @@ impl Default for Hasher {
 /// # use embedded_iconoir::prelude::*;
 /// # use embedded_iconoir::size12px;
 /// # use kolibri_embedded_gui::ui::*;
-/// # use kolibri_embedded_gui::label::*;
+/// # use kolibri_embedded_gui::widgets::{Label, Hasher, HashLabel};
 /// # use kolibri_embedded_gui::smartstate::*;
 /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 /// # let output_settings = OutputSettingsBuilder::new().build();
 /// # let mut window = Window::new("Kolibri Example", &output_settings);
-/// # use kolibri_embedded_gui::label::*;
 /// # let hasher = Hasher::new();
 /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
 /// # let mut smartstateProvider = SmartstateProvider::<20>::new();
@@ -345,12 +339,11 @@ impl<'a> HashLabel<'a> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::{Label, Hasher, HashLabel};
     /// # let hasher = Hasher::new();
     /// # let mut smartstateProvider = SmartstateProvider::<20>::new();
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
@@ -388,12 +381,11 @@ impl<'a> HashLabel<'a> {
     /// # use embedded_iconoir::prelude::*;
     /// # use embedded_iconoir::size12px;
     /// # use kolibri_embedded_gui::ui::*;
-    /// # use kolibri_embedded_gui::label::*;
+    /// # use kolibri_embedded_gui::widgets::{Label, HashLabel, Hasher};
     /// # use kolibri_embedded_gui::smartstate::*;
     /// # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
     /// # let output_settings = OutputSettingsBuilder::new().build();
     /// # let mut window = Window::new("Kolibri Example", &output_settings);
-    /// # use kolibri_embedded_gui::label::*;
     /// # let hasher = Hasher::new();
     /// # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
     /// # let mut smartstateProvider = SmartstateProvider::<20>::new();

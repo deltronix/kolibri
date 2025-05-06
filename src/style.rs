@@ -17,7 +17,7 @@
 //! # use embedded_iconoir::prelude::*;
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
@@ -38,7 +38,7 @@
 //! # use embedded_iconoir::prelude::*;
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();

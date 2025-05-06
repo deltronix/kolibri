@@ -23,14 +23,14 @@
 //! # use embedded_iconoir::size12px;
 //! # use kolibri_embedded_gui::ui::*;
 //! # use embedded_graphics::mono_font::ascii;
-//! # use kolibri_embedded_gui::label::*;
+//! # use kolibri_embedded_gui::widgets::Label;
 //! # use kolibri_embedded_gui::smartstate::*;
 //! # let mut display = SimulatorDisplay::<Rgb565>::new(Size::new(320, 240));
 //! # let output_settings = OutputSettingsBuilder::new().build();
 //! # let mut window = Window::new("Kolibri Example", &output_settings);
 //! # let mut ui = Ui::new_fullscreen(&mut display, medsize_rgb565_style());
 //! # let mut smartstateProvider = SmartstateProvider::<20>::new();
-//! # use kolibri_embedded_gui::slider::*;
+//! # use kolibri_embedded_gui::widgets::Slider;
 //! // Basic slider with range
 //! let mut value = 0i16;
 //! ui.add(Slider::new(&mut value, -100..=100));
@@ -63,7 +63,7 @@
 //! - Efficient fixed-point arithmetic for smooth value interpolation
 //!
 use crate::smartstate::{Container, Smartstate};
-use crate::ui::{GuiResult, Interaction, Response, Ui, Widget};
+use crate::{GuiResult, Interaction, Response, Ui, Widget};
 use core::cmp::max;
 use core::ops::RangeInclusive;
 use embedded_graphics::draw_target::DrawTarget;
